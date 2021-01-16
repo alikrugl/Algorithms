@@ -42,19 +42,19 @@ public:
 	bool operator >=(const Longint&);
 	bool operator ==(const Longint&);
 	bool lessAbsVal(const Longint&);
-	int getSize() // возвращает количество цифр
+	int getSize() // РІРѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ С†РёС„СЂ
 	{
 		return digits.size();
 	}
 	Longint symbJacobi(Longint);
-	Longint gcd(Longint); // наибольший общий делитель
+	Longint gcd(Longint); // РЅР°РёР±РѕР»СЊС€РёР№ РѕР±С‰РёР№ РґРµР»РёС‚РµР»СЊ
 	Longint exp_mod(const Longint&, const Longint&);
-	Longint convertDecBi(); // преобразует с 10 в двоичную
-	Longint convertBiDec(); // с 2-чной в 10-чную
+	Longint convertDecBi(); // РїСЂРµРѕР±СЂР°Р·СѓРµС‚ СЃ 10 РІ РґРІРѕРёС‡РЅСѓСЋ
+	Longint convertBiDec(); // СЃ 2-С‡РЅРѕР№ РІ 10-С‡РЅСѓСЋ
 	Longint exp(const Longint&);
 	void normalize();
-	void pbZero(int); // ставит 0 в конце числа
-	void delBackZero(); // удаляет 0 в конце числа
+	void pbZero(int); // СЃС‚Р°РІРёС‚ 0 РІ РєРѕРЅС†Рµ С‡РёСЃР»Р°
+	void delBackZero(); // СѓРґР°Р»СЏРµС‚ 0 РІ РєРѕРЅС†Рµ С‡РёСЃР»Р°
 	void printInverse(const int&);
 	Longint Karatsuba(const Longint&);
 	Longint KaratsubaRecur(const Longint&, int);
@@ -77,18 +77,18 @@ void FFT(vector <double>&, bool inverse);
 
 void Commands()
 {
-	cout << "Оберiть один з методiв, наведених нижче" << endl;
-	cout << "Для виходу з програми введiть 0" << endl;
-	cout << "1. Карацуби" << '\n';
-	cout << "2. Тоом-Кук" << '\n';
-	cout << "3. Шенхаге" << '\n';
-	cout << "4. Штрассена" << '\n';
-	cout << "5. Аглоритм Кука для знаходження оберненого числа " << '\n';
-	cout << "6. Дiлення Кука" << '\n';
-	cout << "7. Простота Лемана" << '\n';
-	cout << "8. Простота Рабiна Мiллера" << '\n';
-	cout << "9. Простота Соловея Штрассена" << '\n';
-	cout << "10. Простота Агравала" << '\n';
+	cout << "РћР±РµСЂiС‚СЊ РѕРґРёРЅ Р· РјРµС‚РѕРґiРІ, РЅР°РІРµРґРµРЅРёС… РЅРёР¶С‡Рµ" << endl;
+	cout << "Р”Р»СЏ РІРёС…РѕРґСѓ Р· РїСЂРѕРіСЂР°РјРё РІРІРµРґiС‚СЊ 0" << endl;
+	cout << "1. РљР°СЂР°С†СѓР±Рё" << '\n';
+	cout << "2. РўРѕРѕРј-РљСѓРє" << '\n';
+	cout << "3. РЁРµРЅС…Р°РіРµ" << '\n';
+	cout << "4. РЁС‚СЂР°СЃСЃРµРЅР°" << '\n';
+	cout << "5. РђРіР»РѕСЂРёС‚Рј РљСѓРєР° РґР»СЏ Р·РЅР°С…РѕРґР¶РµРЅРЅСЏ РѕР±РµСЂРЅРµРЅРѕРіРѕ С‡РёСЃР»Р° " << '\n';
+	cout << "6. Р”iР»РµРЅРЅСЏ РљСѓРєР°" << '\n';
+	cout << "7. РџСЂРѕСЃС‚РѕС‚Р° Р›РµРјР°РЅР°" << '\n';
+	cout << "8. РџСЂРѕСЃС‚РѕС‚Р° Р Р°Р±iРЅР° РњiР»Р»РµСЂР°" << '\n';
+	cout << "9. РџСЂРѕСЃС‚РѕС‚Р° РЎРѕР»РѕРІРµСЏ РЁС‚СЂР°СЃСЃРµРЅР°" << '\n';
+	cout << "10. РџСЂРѕСЃС‚РѕС‚Р° РђРіСЂР°РІР°Р»Р°" << '\n';
 	cout << endl;
 }
 
@@ -102,11 +102,11 @@ void interface()
 		{
 		case 1:
 		{
-			cout << "Множення Карацуби" << endl;
-			cout << "Введiть х : ";
+			cout << "РњРЅРѕР¶РµРЅРЅСЏ РљР°СЂР°С†СѓР±Рё" << endl;
+			cout << "Р’РІРµРґiС‚СЊ С… : ";
 			Longint* x = new Longint;
 			cin >> *x;
-			cout << "Введiть y : ";
+			cout << "Р’РІРµРґiС‚СЊ y : ";
 			Longint* y = new Longint;
 			cin >> *y;
 			Longint t;
@@ -122,11 +122,11 @@ void interface()
 		}
 		case 2:
 		{
-			cout << "Множення Тоома-Кука " << endl;
-			cout << "Введiть х : ";
+			cout << "РњРЅРѕР¶РµРЅРЅСЏ РўРѕРѕРјР°-РљСѓРєР° " << endl;
+			cout << "Р’РІРµРґiС‚СЊ С… : ";
 			Longint* x = new Longint;
 			cin >> *x;
-			cout << "Введiть y : ";
+			cout << "Р’РІРµРґiС‚СЊ y : ";
 			Longint* y = new Longint;
 			cin >> *y;
 			Longint t;
@@ -142,16 +142,16 @@ void interface()
 		}
 		case 3:
 		{
-			cout << "Не працює" << endl;
+			cout << "РќРµ РїСЂР°С†СЋС”" << endl;
 			break;
 		}
 		case 4:
 		{
-			cout << "Множення Штрассена" << endl;
-			cout << "Введiть х : ";
+			cout << "РњРЅРѕР¶РµРЅРЅСЏ РЁС‚СЂР°СЃСЃРµРЅР°" << endl;
+			cout << "Р’РІРµРґiС‚СЊ С… : ";
 			Longint* x = new Longint;
 			cin >> *x;
-			cout << "Введiть y : ";
+			cout << "Р’РІРµРґiС‚СЊ y : ";
 			Longint* y = new Longint;
 			cin >> *y;
 			Longint t;
@@ -167,8 +167,8 @@ void interface()
 		}
 		case 5:
 		{
-			cout << "Алгоритм Кука для оберненої величини" << endl;
-			cout << "Введiть х : ";
+			cout << "РђР»РіРѕСЂРёС‚Рј РљСѓРєР° РґР»СЏ РѕР±РµСЂРЅРµРЅРѕС— РІРµР»РёС‡РёРЅРё" << endl;
+			cout << "Р’РІРµРґiС‚СЊ С… : ";
 			Longint* x = new Longint;
 			cin >> *x;
 			Longint t;
@@ -183,11 +183,11 @@ void interface()
 		}
 		case 6:
 		{
-			cout << "Множення Кука" << endl;
-			cout << "Введiть х : ";
+			cout << "РњРЅРѕР¶РµРЅРЅСЏ РљСѓРєР°" << endl;
+			cout << "Р’РІРµРґiС‚СЊ С… : ";
 			Longint* x = new Longint;
 			cin >> *x;
-			cout << "Введiть y : ";
+			cout << "Р’РІРµРґiС‚СЊ y : ";
 			Longint* y = new Longint;
 			cin >> *y;
 			Longint t, p;
@@ -204,8 +204,8 @@ void interface()
 		}
 		case 7:
 		{
-			cout << "Простота Лемана" << endl;
-			cout << "Введiть х : ";
+			cout << "РџСЂРѕСЃС‚РѕС‚Р° Р›РµРјР°РЅР°" << endl;
+			cout << "Р’РІРµРґiС‚СЊ С… : ";
 			Longint* x = new Longint;
 			cin >> *x;
 			int d;
@@ -220,8 +220,8 @@ void interface()
 		}
 		case 8:
 		{
-			cout << "Простота Рабiна-Мiллера" << endl;
-			cout << "Введiть х : ";
+			cout << "РџСЂРѕСЃС‚РѕС‚Р° Р Р°Р±iРЅР°-РњiР»Р»РµСЂР°" << endl;
+			cout << "Р’РІРµРґiС‚СЊ С… : ";
 			Longint* x = new Longint;
 			cin >> *x;
 			int d;
@@ -236,8 +236,8 @@ void interface()
 		}
 		case 9:
 		{
-			cout << "Простота Соловея-Штрассена" << endl;
-			cout << "Введiть х : ";
+			cout << "РџСЂРѕСЃС‚РѕС‚Р° РЎРѕР»РѕРІРµСЏ-РЁС‚СЂР°СЃСЃРµРЅР°" << endl;
+			cout << "Р’РІРµРґiС‚СЊ С… : ";
 			Longint* x = new Longint;
 			cin >> *x;
 			int d;
@@ -252,7 +252,7 @@ void interface()
 		}
 		case 10:
 		{
-			cout << "Не працює" << endl;
+			cout << "РќРµ РїСЂР°С†СЋС”" << endl;
 		}
 		}
 		f = choice();
@@ -262,11 +262,11 @@ void interface()
 int choice()
 {
 	int command;
-	cout << "Виберiть метод : ";
+	cout << "Р’РёР±РµСЂiС‚СЊ РјРµС‚РѕРґ : ";
 	cin >> command;
 	while ((command > 11) || (command < 0))
 	{
-		cout << "Введiть число вiд 0-10" << endl;
+		cout << "Р’РІРµРґiС‚СЊ С‡РёСЃР»Рѕ РІiРґ 0-10" << endl;
 		cin >> command;
 	}
 	return command;
@@ -592,13 +592,13 @@ Longint Longint::operator - (const int& y) {
 	return (*this) - p;
 }
 
-void Longint::pbZero(int d) // 0 в кінці
+void Longint::pbZero(int d) // 0 РІ РєС–РЅС†С–
 {
 	while (digits.size() < d)
 		digits.push_back(0);
 }
 
-void Longint::delBackZero() // видалити 0 в кінці
+void Longint::delBackZero() // РІРёРґР°Р»РёС‚Рё 0 РІ РєС–РЅС†С–
 {
 	while (digits.size() > 1 && digits[digits.size() - 1] == 0)
 		digits.pop_back();
